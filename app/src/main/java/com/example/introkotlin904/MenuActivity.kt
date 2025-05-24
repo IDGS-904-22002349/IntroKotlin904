@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.introkotlin904.tema1App.Cinepolis
 import com.example.introkotlin904.tema1App.Ejemplo1Activity
 import com.example.introkotlin904.tema2App.Ejemplo3Activity
+import com.example.introkotlin904.Tema3.Ejemplo4Activity
+import com.example.introkotlin904.Tema4.Ejemplo5Activity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,8 @@ class MenuActivity : AppCompatActivity() {
         val btnEjemplo1 = findViewById<Button>(R.id.btn1)
         val btnCinepolis = findViewById<Button>(R.id.btn2)
         val btnEjemplo2 = findViewById<Button>(R.id.btn3)
+        val btnEjemplo3 = findViewById<Button>(R.id.btn4)
+        val btnEjemplo4 = findViewById<Button>(R.id.btn5)
         btnEjemplo1.setOnClickListener {
            navigateToEjemplo1()
         }
@@ -27,6 +31,12 @@ class MenuActivity : AppCompatActivity() {
         }
         btnEjemplo2.setOnClickListener {
             navigateToEjemplo2()
+        }
+        btnEjemplo3.setOnClickListener {
+            navigateToEjemplo3()
+        }
+        btnEjemplo4.setOnClickListener {
+            navigateToEjemplo4()
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -46,6 +56,14 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigateToEjemplo2(){
         val intent = Intent(this, Ejemplo3Activity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToEjemplo3(){
+        val intent = Intent(this, Ejemplo4Activity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToEjemplo4(){
+        val intent = Intent(this, Ejemplo5Activity::class.java)
         startActivity(intent)
     }
 

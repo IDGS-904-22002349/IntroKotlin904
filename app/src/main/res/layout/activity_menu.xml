@@ -13,17 +13,27 @@
         android:id="@+id/btn1"
         android:layout_width="365dp"
         android:layout_height="wrap_content"
-        android:text="Ejemplo1"/>
+        android:text="Ejemplo 1"/>
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 2"/>
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 3"/>
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 4"/>
     <Button
         android:id="@+id/btn2"
         android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:text="Cinepolis"/>
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:text="Ejemplo2"/>
 
 
 
