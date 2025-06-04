@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:paddingBottom="64dp"
+    tools:context=".calculadoraResistencia.ActivityCalculadoraResistencia">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#90EE90"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:text="Calcular Valor de resistencias"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#D3D3D3"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/resistorImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/colores_resistencias_electricas"
+            android:contentDescription="Imagen de una resistencia y tabla de colores" />
+
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <Spinner
+            android:id="@+id/spinnerColor1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/valueColor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <Spinner
+            android:id="@+id/spinnerColor2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/valueColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Spinner
+            android:id="@+id/spinnerMultiplier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/valueMultiplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0"
+            android:textColor="#D2B48C"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tolerancia"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTolerance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp">
+
+            <RadioButton
+                android:id="@+id/radioOro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="oro"
+                android:checked="true"
+                android:textColor="#D4AF37" />
+
+            <RadioButton
+                android:id="@+id/radioPlata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="plata"
+                android:textColor="#C0C0C0"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#90EE90"
+        android:paddingVertical="12dp"
+        android:text="calcular"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/valueOhm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor ohm 0.00"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/valueMaximo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor maximo 0.00"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/valueMinimo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor minimo 0.00"
+        android:textSize="18sp"/>
+
+</LinearLayout>

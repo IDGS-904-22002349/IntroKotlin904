@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diccionarioApp.ActivityCapturar">
+
+    <TextView
+        android:id="@+id/tvtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capturar Palabras"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvtituloespanol"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Español"
+    android:textSize="18sp"
+    app:layout_constraintTop_toBottomOf="@+id/tvtitulo"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="40dp"
+    android:layout_marginStart="40dp" />
+
+    <EditText
+        android:id="@+id/edtespanol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvtituloespanol"
+        app:layout_constraintStart_toStartOf="@+id/tvtituloespanol"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp" />
+
+    <TextView
+        android:id="@+id/tvtituloingles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingles"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtespanol"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="40dp" />
+
+    <EditText
+        android:id="@+id/edtingles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvtituloingles"
+        app:layout_constraintStart_toStartOf="@+id/tvtituloingles"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtingles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/btnmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar al Menú"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

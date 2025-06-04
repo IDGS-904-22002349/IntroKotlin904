@@ -12,6 +12,8 @@ import com.example.introkotlin904.tema1App.Ejemplo1Activity
 import com.example.introkotlin904.tema2App.Ejemplo3Activity
 import com.example.introkotlin904.Tema3.Ejemplo4Activity
 import com.example.introkotlin904.Tema4.Ejemplo5Activity
+import com.example.introkotlin904.calculadoraResistencia.ActivityCalculadoraResistencia
+import com.example.introkotlin904.diccionarioApp.MainActivityDiccionario
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,8 @@ class MenuActivity : AppCompatActivity() {
         val btnEjemplo2 = findViewById<Button>(R.id.btn3)
         val btnEjemplo3 = findViewById<Button>(R.id.btn4)
         val btnEjemplo4 = findViewById<Button>(R.id.btn5)
+        val btnEjemplo5 = findViewById<Button>(R.id.btn6)
+        val btnEjemplo6 = findViewById<Button>(R.id.btn7)
         btnEjemplo1.setOnClickListener {
            navigateToEjemplo1()
         }
@@ -38,6 +42,13 @@ class MenuActivity : AppCompatActivity() {
         btnEjemplo4.setOnClickListener {
             navigateToEjemplo4()
         }
+        btnEjemplo5.setOnClickListener {
+            navigateToEjemplo5()
+        }
+        btnEjemplo6.setOnClickListener {
+            navigateToEjemplo6()
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -64,6 +75,14 @@ class MenuActivity : AppCompatActivity() {
     }
     private fun navigateToEjemplo4(){
         val intent = Intent(this, Ejemplo5Activity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToEjemplo5(){
+        val intent = Intent(this, MainActivityDiccionario::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToEjemplo6(){
+        val intent = Intent(this, ActivityCalculadoraResistencia::class.java)
         startActivity(intent)
     }
 

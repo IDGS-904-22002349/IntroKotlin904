@@ -30,6 +30,16 @@
         android:layout_height="wrap_content"
         android:text="Ejemplo 4"/>
     <Button
+        android:id="@+id/btn6"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 5"/>
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 6"/>
+    <Button
         android:id="@+id/btn2"
         android:layout_width="365dp"
         android:layout_height="wrap_content"
